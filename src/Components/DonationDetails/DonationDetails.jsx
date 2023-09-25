@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveDonation } from "../Uitility/Localstoage";
 const DonationDetails = () => {
     const donations = useLoaderData();
     const {id} = useParams();
@@ -11,7 +12,10 @@ const DonationDetails = () => {
    console.log(donation)
 
    const handleDonation = ()=>{
-    toast(' দান করিলে মান কমে না নেকির পাল্লা হয় ভারি বেশি বেশি দান করিলে জান্নাতে হয় ঘরবাড়ি। ', {
+
+  saveDonation(idInt)
+
+    toast(' Your donation will be delivered correctly ', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
