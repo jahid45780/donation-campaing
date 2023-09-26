@@ -1,4 +1,5 @@
   <img src={https://i.ibb.co/zmNNh8K/6931239-29981.jpg} />
+  <img src=" ../../public/img/6931239_29981.jpeg">
    <br>
 
    <h1 className=" text-2xl " > <span className=" text-2xl" > Question </span> least 3 Project features </h1>
