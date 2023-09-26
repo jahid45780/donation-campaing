@@ -22,15 +22,19 @@ const Donation = () => {
         }
     },[])
     return (
-        <div>
-            <h2> donation {alliedDonations.length} </h2>
+        <div className=" m-4" >
+          
 
-            <section>
+            <section className=" grid grid-cols-1 lg:grid-cols-2 gap-4 " >
                 {
                     alliedDonations.map(donation => <DonationMap key={donation.id} donation={donation} ></DonationMap> )
                 }
             </section>
+           <p className=" text-center" >
 
+           <button  className=" bg-blue-600 rounded-lg text-xl text-white px-3 py-3 text-center  mt-5  " > See All </button>
+
+           </p>
         </div>
     );
 };
