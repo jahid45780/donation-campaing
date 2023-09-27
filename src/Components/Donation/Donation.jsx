@@ -6,6 +6,7 @@ import DonationMap from "../DonationMap/DonationMap";
 const Donation = () => {
     const donations = useLoaderData();
     const  [alliedDonations, setAppliedDonations]=  useState([])
+    const [isShow, setIsShow]= useState(false)  
     useEffect(()=>{
         const storedDonationIds = getStoredApplication();
         if(donations.length > 0 ){
@@ -30,10 +31,15 @@ const Donation = () => {
                     alliedDonations.map(donation => <DonationMap key={donation.id} donation={donation} ></DonationMap> )
                 }
             </section>
-           <p className=" text-center" >
+           <div className=" flex justify-center mt-5" >
 
-           <button  className=" bg-blue-600 rounded-lg text-xl text-white px-3 py-3 text-center  mt-5  " > See All </button>
-           </p>
+              {
+                donations.length > 4 && <button onClick={()=> setIsShow(!isShow)} className=" bg-green-600 text-white rounded-md  p-3" >
+                      See All
+                </button>
+              }
+
+           </div>
         </div>
     );
 };

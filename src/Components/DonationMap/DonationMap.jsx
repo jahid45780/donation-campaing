@@ -1,5 +1,6 @@
 
 
+
 const DonationMap = ({donation}) => {
     const {image,title,donatePrice,category, backgroundColor,textColor}= donation;
     return (
@@ -25,11 +26,20 @@ const DonationMap = ({donation}) => {
             <p className=" font-semibold" 
               style={{color:textColor}}
             > ${donatePrice}.00 </p>
-            <button className=" btn shadow-lg "
+
+    
+        
+       <button  className=" btn shadow-lg "
              style={{backgroundColor:textColor}}
 
             > View Details </button>
+        
+  
+
+       
         </div>
+
+         
 
         
 

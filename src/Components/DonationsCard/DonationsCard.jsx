@@ -20,7 +20,7 @@ const DonationsCard = () => {
                 }
             </div>
 
-        </div>
+        </div> 
     );
 };
 

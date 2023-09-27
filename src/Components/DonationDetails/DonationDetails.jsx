@@ -32,8 +32,12 @@ const DonationDetails = () => {
     
         <div>
                   <ToastContainer />
-             <img  className=" w-full h-96 mt-6  relative  " src={donation.image} alt="" /> 
-             <button onClick={handleDonation} className=" bg-red-600 p-4 rounded-md -mt-16 ml-5 absolute " > Donate $ {donation.donatePrice} </button>
+             <img  className=" w-full h-96 mt-6   " src={donation.image} alt="" /> 
+            <div className=" bg-black h-[100px] opacity-50 -mt-[100px] " >
+
+            </div>
+           
+           <button onClick={handleDonation} className="  p-4 rounded-md -mt-10 ml-5 -top-16 text-white font-bold relative " style={{backgroundColor:donation.backgroundColor}} > Donate $ {donation.donatePrice} </button>
              <h1 className=" text-2xl font-bold mt-3" > {donation.title} </h1>
              <p className=" text-xl mt-3 " > {donation.description} </p>
             
